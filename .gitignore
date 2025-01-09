@@ -1,6 +1,11 @@
 
 # Created by https://www.gitignore.io/api/macos,windows,linux,c
 
+# build dir
+build/
+# .vscode 
+.vscode/
+
 ### C ###
 # Prerequisites
 *.d
