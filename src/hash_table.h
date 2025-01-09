@@ -7,6 +7,7 @@ typedef struct {
 } ht_item;
 
 typedef struct{
+    int basesize; //初始大小
     int size;
     int count;
     ht_item** items; // Array of pointers to ht_items
