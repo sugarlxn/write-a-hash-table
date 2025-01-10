@@ -25,6 +25,14 @@ int main(int argc, char* argv[]){
         printf("key1 is deleted\n");
     }
 
+    ht_insert(ht, "key1", "value1");
+    value = ht_search(ht, "key1");
+    printf("key1: %s\n", value);
+
+    ht_insert(ht, "key1", "new_value1");
+    value = ht_search(ht, "key1");
+    printf("key1: %s\n", value);
+    
     ht_del_hash_table(ht);
 
     return 0;
