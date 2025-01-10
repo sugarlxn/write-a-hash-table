@@ -1,5 +1,4 @@
-[<img src="/.translations/flags/gb.png">](/README.md) [<img src="/.translations/flags/fr.png">](/.translations/fr/README.md)
-
+[<img src="/.translations/flags/gb.png">](/README.md) 
 # Write a hash table in C
 
 [Hash tables](https://en.wikipedia.org/wiki/Hash_table) are one of the most useful data structures. Their quick and scalable
@@ -42,3 +41,34 @@ hour or two to work through.
 
 This tutorial was written by [James Routley](https://twitter.com/james_routley),
 who blogs at [routley.io](https://routley.io).
+
+## Dir tree
+
+```shell
+  └── src
+      ├── CMakeLists.txt
+      ├── hash_table.c
+      ├── hash_table.h
+      ├── main.c
+      ├── prime.c
+      └── prime.h
+```
+
+## Getting started
+1. create a build directory
+```shell
+mkdir build
+cd build
+```
+2. run cmake to generate the makefile at the build directory
+```shell
+cmake ../src/
+```
+3. run make to build the executable at the build directory
+```shell
+make 
+```
+4. after run the `make` command, the executable file main will be generated at the build directory, just run it like this:
+```shell  
+./main
+```
