@@ -3,6 +3,7 @@
 #include <math.h>
 #include "hash_table.h"
 #include "prime.h"
+#include <stdio.h>
 
 #define HT_PRIME_1 151
 #define HT_RPIME_2 163
@@ -43,6 +44,7 @@ ht_hash_table* ht_new(){
 /// @brief 删除一个hash tabel item， 静态函数，只能在本文件中调用
 /// @param i 
 static void ht_del_item(ht_item* i){
+    // printf("delete key:%s value:%s \n", i->key, i->value);
     free(i->key);
     free(i->value);
     free(i);
@@ -54,13 +56,11 @@ static void ht_del_item(ht_item* i){
 void ht_del_hash_table(ht_hash_table* ht){
     for(int i = 0; i < ht->size; i++){
         ht_item* item = ht->items[i];
-        if(item != NULL){
+        if(item != NULL && item != &HT_DELETE_ITEM){
             ht_del_item(item);
         }
     }
-
     free(ht->items);
-    
     free(ht);
 }
 
